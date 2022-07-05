@@ -26,6 +26,7 @@ const getToken = async ({phoneNumber, oneTimePassword, setUserLoggedIn}) =>{
     setUserLoggedIn(true);
   }
 const tokenResponseString = await tokenResponse.text();
+console.log("Token",tokenResponseString);
 }
 const Login = (props) => {
   const [phoneNumber, setPhoneNumber] = useState("");
