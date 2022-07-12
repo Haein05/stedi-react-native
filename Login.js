@@ -26,12 +26,13 @@ const getToken = async ({phoneNumber, oneTimePassword, setUserLoggedIn}) =>{
     setUserLoggedIn(true);
   }
 const tokenResponseString = await tokenResponse.text();
-console.log("Token",tokenResponseString);
+//console.log("Token",tokenResponseString);
 
 const emailResponse = await fetch('https://dev.stedi.me/validate/'+tokenResponseString);
 
 const email = await emailResponse.text();
 
+//console.log("Email",email);
 props.setUserName(email);
 }
 const Login = (props) => {
